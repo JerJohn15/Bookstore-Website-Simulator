@@ -1,0 +1,9 @@
+******************************
+	     Main Menu:
+******************************
+s: Search for an item
+c: Checkout 
+b: Show Current Account Balance
+a: Add Payment 
+l: Logout (exits program)
+******************************

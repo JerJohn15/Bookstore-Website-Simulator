@@ -1,0 +1,10 @@
+******************************
+	     Checkout:
+******************************
+v: View list of checked out items
+p: purchase items
+b: back to Main Menu
+d: Delete an item from checkout
+c: Delete all items from checkout
+l: Logout (exits program)
+******************************
