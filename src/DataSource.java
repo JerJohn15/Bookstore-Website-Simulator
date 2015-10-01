@@ -22,9 +22,9 @@ public class DataSource {
     public DataSource() throws IOException, SQLException, PropertyVetoException {
         cpds = new ComboPooledDataSource();
         cpds.setDriverClass("com.mysql.jdbc.Driver"); 
-        cpds.setJdbcUrl("jdbc:mysql://localhost/test");
+        cpds.setJdbcUrl("jdbc:mysql://localhost/bookstore");
         cpds.setUser("root");
-        cpds.setPassword("ProgJ16");
+        cpds.setPassword("JProg16");
 
    
 
