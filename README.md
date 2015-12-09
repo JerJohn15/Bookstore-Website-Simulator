@@ -7,7 +7,7 @@ This project was a college project for my Database Management class. The goal wa
 
 
 Go  [here ](https://drive.google.com/open?id=0B_Mzb0tpEYLWRTNGWFNaR2R5TWc) to view the documentation. 
-
+For the SQL files neeeded to create the database, go [here](https://drive.google.com/folderview?id=0B_Mzb0tpEYLWeGcyMHc3cFFlZ3M&usp=sharing)
 #Whats Contained in the Document:
 
 In my document I explain, why I chose to create a simulation of an e-commerce bookstore website, identify the targeted design features I wanted to implement,  outline the design of each of the classes, tables and SQL queries used in my database, and how I access the database in the backend. In addition, I've also included an ER-Diagram, which details the relationships each of my tables have in the database, and a screen shot of a sample test run of the program. Finally, I offer a conclusion, explaining some of the challenges I faced while working on it. 
