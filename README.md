@@ -6,8 +6,7 @@
 This project was a college project for my Database Management class. The goal was to identify a real-world application where we would utilize a database and implement it using whatever languages we desired. I decided to create a simulator for purchasing books from a bookstore website. The program output is displayed as text from within a console.  In addition to coding the project, we needed provide documentation that explains, our application functionalities, defines our targeted users, and include an ER Diagram, to model the domain of our database used in our application. 
 
 
-Below, I've included a brief outline of the tools I used to implement my application, features that I incorporated into implementing it, and an explaination of what happens when the program is run. For a more detailed description of how I designed this project,  
-[download](https://drive.google.com/open?id=0B_Mzb0tpEYLWRTNGWFNaR2R5TWc)  the following documentation. 
+Below, I've included a brief outline of the tools I used to implement my application, features that I incorporated into implementing it, and an explaination of what happens when the program is run. For a more detailed description of how I designed this project, please [download](https://drive.google.com/open?id=0B_Mzb0tpEYLWRTNGWFNaR2R5TWc)  the following documentation. 
 
 
 
