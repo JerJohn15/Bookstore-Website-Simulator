@@ -33,7 +33,7 @@ User Friendly Features:
 -	Ability to go back to a previous page  
 -	Ability to delete books from a user’s checkout cart 
 
-* In addition to these features, I have also designed my program, to handle, some common potential errors that could be made from within the program, based on user input. 
+* In addition to these features, I have also designed my program, to handle, some common potential errors that could be made from within the program, based on user input. *
 Database Usage: 
 
 - For storing a user's username, password, and allowance
