@@ -51,7 +51,27 @@ Database Usage:
 
 **Note: ** I've created some SQL files containing the database tables needed for the databaseL. You will need to import them using MySQL Workbench. To download the files, go [here](https://drive.google.com/folderview?id=0B_Mzb0tpEYLWeGcyMHc3cFFlZ3M&usp=sharing)
 
+#Project Structure
 
+Below is an outline of the files created in this project.
+
+```java
+Bookstore-Website-Simulator
+default package/
+----src/
+--------BookstoreSimulator.java//the MAIN file which runs the program and handles displaying the prompts for a user's login credentials
+--------cashRegister.java// handles all the money transactions 
+--------DataSource.java// Configures the Database and C3PO
+--------DB.java// contains the backend for the database 
+--------Menus.java// contains the front-end logic for each menu 
+lib/
+--------c3p0-0.9.5.1.jar //Contains the C3PO library needed to create the data pooling
+--------mchange-commons-java.0.2.10.jar // another file needed to use C3PO
+--------mysql-connector-java.5.1.36-bin.jar//mysql connector required to use MySQL
+Checkout_Menu.txt//contains the menu with the checkout options
+Home_Menu.txt//contains the menu for the homepage with its options
+
+```
 
 
 
