@@ -24,7 +24,7 @@ public class DataSource {
         cpds.setDriverClass("com.mysql.jdbc.Driver"); 
         cpds.setJdbcUrl("jdbc:mysql://localhost/bookstore");
         cpds.setUser("root");
-        cpds.setPassword("JProg16");
+        cpds.setPassword("ProgJ16");
 
    
 

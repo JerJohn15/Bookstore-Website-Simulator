@@ -73,10 +73,36 @@ Home_Menu.txt//contains the menu for the homepage with its options
 
 ```
 
+#Potential Bugs
 
+While this application works, there are some bugs that could occur depending on the user's input. Below are some of the bugs I have identified:
 
+**Verifying record action from the database **
 
+- When searching for a book by category, the user isn't notified whether or not their book has been added to their checkout cart, after they have selected a book
+by its book id.
 
+- User is not notified that their book has been deleted from their checkout cart after typing in the book to delete. 
 
+- User is not shown all of their books in their checkout cart when they are
+prompted to delete just a single  book from their cart. 
+ 
+ **Note: ** To remedy the above issues, the user will have to go to the checkout menu enter the option to view all of their books in their checkout cart. (You could also look inside the database itself). 
+ 
+ **Deleting Purchased Records from the Checkout Cart**
+ 
+ - After making a purchase, all of the items from within a user's checkout cart
+ does not delete from the database.
+ 
+ **Note: ** The user will have to manually delete the records by entering
+"c" from the checkout menu. 
+ 
+#Project Demo
+
+Below is a demo of my project. Demonstration shows: a user logging into 
+an existing account, searching for a book by entering in a book title, adding 
+a searched book to the checkout cart and making a purchase. 
+
+![Demo](https://media.giphy.com/media/l0NwynxaONw6paOly/giphy.gif)
 
 

@@ -55,7 +55,7 @@ public class DB {
 	}
 
 	/**
-	 * @method - isEmpty` 
+	 * @method - isEmpty
 	 * @details - Checks to see if a record is in the checkout
 	 * cart.
 	 * @return - true or false 
