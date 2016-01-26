@@ -62,8 +62,6 @@ git clone https://github.com/JerJohn15/Bookstore-Website-Simulator.git
 #Identifying Customer Needs
  Customers want a service that is convenient to them, so there needs to be a feature for searching a product and getting a result as well as an option for checking out an item. Since there exists a feature for checking out a user’s potentially purchased items, there should be a login and registration feature, as well as a database to store all accounts created on the site. Finally, menus need to be presented to the user so they can easily read options they might want to access, and interact with those options in the interface.
 
-
-
 #Identifying Target Specifications
 
 Below is a short description of what the program does when it is run:
@@ -107,11 +105,12 @@ I have two menus: Home_Menu and Check_Out as text files that, when loaded, will 
 
 ![Home Menu](http://s29.postimg.org/3r455d9nb/home_menu.png)
 
-*Screenshot of home menu*
+`Screenshot of home menu`
 
 ![Checkout Menu](http://s28.postimg.org/v0rxl60b1/checkout_menu.png)
 
-*Screenshot of checkout menu*
+`Screenshot of checkout menu`
+
 The files are loaded in the readMenu method in the Menus class. After a user has logged in, the home_menu is loaded in the homeMenu method. Each time a user accesses the home or check out menus, the following steps occur: (1) set the variable filename to the location of the menu files, (2) read menu from text file in readMenu, and (3) prompt the user to choose a selection from the menu from method, promptSelection. The following figure shows a sample code snippet from the homeMenu method using these steps:
 
 ![Home Menu Snippet](http://s8.postimg.org/7lppj8hud/home_menu_code_snipett.png)
@@ -131,7 +130,8 @@ I’ve created my bookstore database using MySQL, and I’m accessing it using J
 
 
   ![ER Diagram](http://s7.postimg.org/mf6w2tvej/er_diagram.png)
-
+  
+`ER Diagram showing design for the account, checkout and item_record databases`
 
   Although it doesn’t show this explicitly in the diagram itself, lines in the cardinality should show a many to many mapping for both, **has** and **can_purchase** relationships between the tables account and check_out, as well as check_out and item_record. Many user accounts can have many books to checkout, while many checkout carts from users can purchase many books from an item_record table. Both have non-identifying relationships, in their relations, because the foreign keys, username and book_title, can occur more than once (the same user can purchase multiple books, including duplicate ones).
 
@@ -149,41 +149,51 @@ Below is a list of all of the queries that are used in my program and an overvie
 
 ![SQL q2](http://s18.postimg.org/rxsm9frt5/sql_q2.png)
 
+
 3)	Verifying a username when registering a new account - **handleRegistration**
 
 ![SQL q3](http://s24.postimg.org/9ab8cvjk5/sql_q3.png)
+
 
 4)	Registers a new user to the website- **handleRegistration**
 
 ![SQL q4](http://s7.postimg.org/dp1zwmdyz/sql_q4.png)
 
+
 5)	Updates a user’s account balance – **changeAccount**
 
 ![SQL q5](http://s15.postimg.org/t4cf52z3f/sql_q5.png)
+
 
 6)	Searches for a specific book title - **handleSearch**
 
 ![SQL q6](http://s2.postimg.org/gu76mfa2h/sql6.png)
 
+
 7)	Shows all categories in item_record, if searching by book category -**handleSearchFilter**
 
 ![SQL q7](http://s27.postimg.org/ys2vgzu77/sql_q7.png)
+
 
 8)	Display all the books from a specific category being searched - **handleSearchFilter**
 
 ![SQL q8](http://s17.postimg.org/suxpjfiwf/sql_q8.png)
 
+
 9)	Deletes all of a user’s books in their checkout cart – **handleCheckout**
 
 ![SQL q9](http://s28.postimg.org/m9zlyvj0t/sql_q9.png)
+
 
 10)	Displays all items in a user’s checkout cart – **viewCheckout**
 
 ![SQL q10](http://s15.postimg.org/5riz0b8dn/sql_q10.png)
 
+
 11)	Deletes a specific item from a user’s checkout - **handleCheckout**
 
 ![SQL q11](http://s7.postimg.org/9ucdz9yyj/sql_q11.png)
+
 
 12)	Inserts a user’s desired item into their checkout cart by getting either the book id and book category or the book id and book title that is entered by the user – **promptAddCheckout**
 
@@ -194,15 +204,18 @@ Below is a list of all of the queries that are used in my program and an overvie
 
 ![SQL q13](http://s8.postimg.org/t46td6ez9/sql_q13.png)
 
+
 14)	Sets the remaining account balance back in a user’s account after calculating change –**handlePurchase**
 
 ![SQl q14](http://s9.postimg.org/azvfz2db3/sql_q14.png)
+
 
 ###Accessing the Database
 
 I’ve created SQL queries, in addition to other operations (INSERT, DELETE, and UPDATE) that are used within the parts of my program that verifies a user’s credentials, updates a user’s account balance, searches for books in the bookstore catalogue, and manipulates data within a user’s checkout cart. In my Menus class, I have a variable, SQLstatement, where I set each SQL statement that will be executed. When the database is to be accessed, it will usually follows these steps: (1) set the SQL statement being performed, or (2) access the database and perform the action in the SQL statement. The following code snippet, from the method handleLogin, shows how this works:
 
 ![handleSearch1](http://s11.postimg.org/auy77lx4j/SQL_ex1.png)
+
 (1) Sets the query in SQLstatement, (2) checks if login credentials are found in account table, (3) prints the message inside IF statement, if true, and verifies that a login has been  successful.
 
 The above mentioned process is used for accessing the account and check_out tables in the database, but a slight variation is used when the user is searching for a book in the item_record table. Before I explain this process, it should be noted that when the user is searching for an item, they have the ability to search, via book title or by book category (read the comments in the method handleSearch in my Menus class for more information). In addition to setting the SQL statement in the variable, I have two Boolean variables, isItem_Record, and isCategory, that are used to indicate whether or not the database being accessed is from the item_record table, and if I would like to see just the categories within the item_record table or information about a discovered book in the inventory (book title, author, price). The following code snippets, from within methods, handleSearchFilter and handleSearch, shows how this process works:
@@ -210,11 +223,11 @@ The above mentioned process is used for accessing the account and check_out tabl
 
 ![handlesearch2](http://s24.postimg.org/jinj7j7px/SQL_query_search.png)
 
- *In this example, from, handleSearchFilter, the SQL statement is set, then both variables are set to true to indicate that the user would like to see all categories from the item_record table*
+ `In this example, from, handleSearchFilter, the SQL statement is set, then both variables are set to true to indicate that the user would like to see all categories from the item_record table`
 
 ![handleSearch3](http://s18.postimg.org/9wctvr5g9/handle_Search3.png)
 
-*In this example, from handleSearch method, the isItem_Record variable is set to true to indicate that the user would like to see information about a discovered book. Note: Since isCategory is set by default to false, we do not have to set it to false here.*
+`In this example, from handleSearch method, the isItem_Record variable is set to true to indicate that the user would like to see information about a discovered book. Note: Since isCategory is set by default to false, we do not have to set it to false here.`
 
 In the DB class, the method handleQueries, checks for the values of isItem_Record and isCategory, and displays either all categories in the table or information regarding a discovered book. There is also a condition to handle the display of all the items in the checkout cart (See method for more information).
 
