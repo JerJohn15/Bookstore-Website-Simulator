@@ -216,7 +216,7 @@ I’ve created SQL queries, in addition to other operations (INSERT, DELETE, and
 
 ![handleSearch1](http://s11.postimg.org/auy77lx4j/SQL_ex1.png)
 
-(1) Sets the query in SQLstatement, (2) checks if login credentials are found in account table, (3) prints the message inside IF statement, if true, and verifies that a login has been  successful.
+`(1) Sets the query in SQLstatement, (2) checks if login credentials are found in account table, (3) prints the message inside IF statement, if true, and verifies that a login has been  successful.`
 
 The above mentioned process is used for accessing the account and check_out tables in the database, but a slight variation is used when the user is searching for a book in the item_record table. Before I explain this process, it should be noted that when the user is searching for an item, they have the ability to search, via book title or by book category (read the comments in the method handleSearch in my Menus class for more information). In addition to setting the SQL statement in the variable, I have two Boolean variables, isItem_Record, and isCategory, that are used to indicate whether or not the database being accessed is from the item_record table, and if I would like to see just the categories within the item_record table or information about a discovered book in the inventory (book title, author, price). The following code snippets, from within methods, handleSearchFilter and handleSearch, shows how this process works:
 
