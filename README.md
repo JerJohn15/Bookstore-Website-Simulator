@@ -81,7 +81,7 @@ In the following section, I will elaborate more on these points.
 
 #Selecting and Implementing Design Concepts
 
-##Project Structure
+###Project Structure
 
 Below is an outline of the files created in this project.
 
@@ -103,12 +103,15 @@ Home_Menu.txt//contains the menu for the homepage with its options
 ```
 ###Menus
 
-	I have two menus: Home_Menu and Check_Out as text files that, when loaded, will show the user the different options they will be presented throughout the program. Home_Menu, is the main menu that will show the user options they can select to search for an item, change a user’s balance in their account, view their account balance, go to the checkout menu, or end the program, and Check_Out is the sub-menu of the main menu that lists options the user can call to access features within the checkout cart.  Below is a screen shot of the txt files:
+I have two menus: Home_Menu and Check_Out as text files that, when loaded, will show the user the different options they will be presented throughout the program. Home_Menu, is the main menu that will show the user options they can select to search for an item, change a user’s balance in their account, view their account balance, go to the checkout menu, or end the program, and Check_Out is the sub-menu of the main menu that lists options the user can call to access features within the checkout cart.  Below is a screen shot of the txt files:
 
 ![Home Menu](http://s29.postimg.org/3r455d9nb/home_menu.png)
 
+*Screenshot of home menu*
+
 ![Checkout Menu](http://s28.postimg.org/v0rxl60b1/checkout_menu.png)
 
+*Screenshot of checkout menu*
 The files are loaded in the readMenu method in the Menus class. After a user has logged in, the home_menu is loaded in the homeMenu method. Each time a user accesses the home or check out menus, the following steps occur: (1) set the variable filename to the location of the menu files, (2) read menu from text file in readMenu, and (3) prompt the user to choose a selection from the menu from method, promptSelection. The following figure shows a sample code snippet from the homeMenu method using these steps:
 
 ![Home Menu Snippet](http://s8.postimg.org/7lppj8hud/home_menu_code_snipett.png)
@@ -119,7 +122,7 @@ To make the interface more user-friendly, I’ve included in most of my prompts 
 
 ###Databases:
 
-	I’ve created my bookstore database using MySQL, and I’m accessing it using JDBC in java. I’m also using an external library, C3PO to perform a technique known as data pooling, which is used to set up a connection to a database and retrieve that same connection whenever you need it without having to reestablish a new connection each time you want to access the database, the latter process being extremely slow (see class DataSource and DB for DB configuration and data pooling implementation).
+I’ve created my bookstore database using MySQL, and I’m accessing it using JDBC in java. I’m also using an external library, C3PO to perform a technique known as data pooling, which is used to set up a connection to a database and retrieve that same connection whenever you need it without having to reestablish a new connection each time you want to access the database, the latter process being extremely slow (see class DataSource and DB for DB configuration and data pooling implementation).
 
 
 ###ER Diagram
@@ -200,15 +203,18 @@ Below is a list of all of the queries that are used in my program and an overvie
 I’ve created SQL queries, in addition to other operations (INSERT, DELETE, and UPDATE) that are used within the parts of my program that verifies a user’s credentials, updates a user’s account balance, searches for books in the bookstore catalogue, and manipulates data within a user’s checkout cart. In my Menus class, I have a variable, SQLstatement, where I set each SQL statement that will be executed. When the database is to be accessed, it will usually follows these steps: (1) set the SQL statement being performed, or (2) access the database and perform the action in the SQL statement. The following code snippet, from the method handleLogin, shows how this works:
 
 ![handleSearch1](http://s11.postimg.org/auy77lx4j/SQL_ex1.png)
-
+(1) Sets the query in SQLstatement, (2) checks if login credentials are found in account table, (3) prints the message inside IF statement, if true, and verifies that a login has been  successful.
 
 The above mentioned process is used for accessing the account and check_out tables in the database, but a slight variation is used when the user is searching for a book in the item_record table. Before I explain this process, it should be noted that when the user is searching for an item, they have the ability to search, via book title or by book category (read the comments in the method handleSearch in my Menus class for more information). In addition to setting the SQL statement in the variable, I have two Boolean variables, isItem_Record, and isCategory, that are used to indicate whether or not the database being accessed is from the item_record table, and if I would like to see just the categories within the item_record table or information about a discovered book in the inventory (book title, author, price). The following code snippets, from within methods, handleSearchFilter and handleSearch, shows how this process works:
 
 
 ![handlesearch2](http://s24.postimg.org/jinj7j7px/SQL_query_search.png)
 
+ *In this example, from, handleSearchFilter, the SQL statement is set, then both variables are set to true to indicate that the user would like to see all categories from the item_record table*
 
 ![handleSearch3](http://s18.postimg.org/9wctvr5g9/handle_Search3.png)
+
+*In this example, from handleSearch method, the isItem_Record variable is set to true to indicate that the user would like to see information about a discovered book. Note: Since isCategory is set by default to false, we do not have to set it to false here.*
 
 In the DB class, the method handleQueries, checks for the values of isItem_Record and isCategory, and displays either all categories in the table or information regarding a discovered book. There is also a condition to handle the display of all the items in the checkout cart (See method for more information).
 
@@ -230,9 +236,9 @@ prompted to delete just a single  book from their cart.
 
  **Note:** To remedy the above issues, the user will have to go to the checkout menu enter the option to view all of their books in their checkout cart. (You could also look inside the database itself).
 
- **Deleting Purchased Records from the Checkout Cart**
+**Deleting Purchased Records from the Checkout Cart**
 
- - After making a purchase, all of the items from within a user's checkout cart
+- After making a purchase, all of the items from within a user's checkout cart
  does not delete from the database.
 
  **Note:** The user will have to manually delete the records by entering
