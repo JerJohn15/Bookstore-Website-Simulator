@@ -3,14 +3,14 @@
 
 #Project Summary:
 
-This project was a college project for my Database Management class. The goal was to identify a real-world application where we would utilize a database and implement it using whatever languages we desired. I decided to create a simulator for purchasing books from a bookstore website. The program output is displayed as text from within a console.  In addition to coding the project, we needed to provide documentation that explains, our application's functionality, defines our targeted users, and includes an ER Diagram, to model the domain of our database used in our application.
+This was a college project for my Database Management course. The goal was to identify a real-world application where we would utilize a database and implement it using whatever programming language/s we desired. I decided to create a simulator for purchasing books from a bookstore website. The program output is displayed as text from within a console.  In addition to coding the project, we needed to provide documentation that explains, our application's functionality, defines our targeted users, and includes an ER Diagram, to model the domain of our database used in our application.
 
 
 Below, I've included a brief outline of the tools I used to implement my application, features that I incorporated into implementing it, and an explanation of what happens when the program is run. At the end, there is a screenshot of a demo of the program running.
 
 #Features for the Application
 
-Basic Features
+**Basic Features**
 
 -	Registering a new account
 -	Logging into an existing account
@@ -31,10 +31,10 @@ Basic Features
 **Database Usage:**
 
 - For storing a user's username, password, and allowance
-- All of the books that are available for sale
-- All of the books that are within a user's checkout cart
+-  For storing all of the books that are available for sale
+- For storing all of the books that are within a user's checkout cart
 
-*The name of the database tables for which I have stored each of this information is called, "account", "item record", and "check out".*
+*The name of the database tables for which I have stored each of this information is called, "account", "item_record", and "check _out".*
 
 #Tools Used:
 
@@ -68,7 +68,7 @@ Below is a short description of what the program does when it is run:
 
 **What happens when the program runs:**
 
-*	Prompt for the user to login or register. If login credentials are successful, show user the different choices they have available to them on the site. If not, then user will have to restart the program and register a new account.
+*	Prompt for the user to login or register. If login credentials are successful, show user the different choices they have available to them on the site. If not, then the user will have to restart the program and register a new account.
 *	If searching, search for an item within the item_record table either by book title, or by a book category (this is a search filter). If the user decides they would like to purchase a book, add it to the cart.
 *	If selecting check out menu, show the user choice to view the entire checkout cart, delete an item from the cart, delete entire cart, or make a purchase.
 *	After performing the action indicated by the user, either return to the submenu (check out or search menu), in case the user wants to continue to use that feature, or return to the main menu.
@@ -111,7 +111,7 @@ I have two menus: Home_Menu and Check_Out as text files that, when loaded, will 
 
 `Screenshot of checkout menu`
 
-The files are loaded in the readMenu method in the Menus class. After a user has logged in, the home_menu is loaded in the homeMenu method. Each time a user accesses the home or check out menus, the following steps occur: (1) set the variable filename to the location of the menu files, (2) read menu from text file in readMenu, and (3) prompt the user to choose a selection from the menu from method, promptSelection. The following figure shows a sample code snippet from the homeMenu method using these steps:
+The files are loaded in the readMenu method in the Menus class. After a user has logged in, the home_menu is loaded in the *homeMenu* method. Each time a user accesses the home or check out menus, the following steps occur: (1) set the variable filename to the location of the menu files, (2) read menu from text file in readMenu, and (3) prompt the user to choose a selection from the menu from method, promptSelection. The following figure shows a sample code snippet from the homeMenu method using these steps:
 
 ![Home Menu Snippet](http://s8.postimg.org/7lppj8hud/home_menu_code_snipett.png)
 
