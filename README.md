@@ -7,8 +7,6 @@ I've created a wiki with a detailed description of how I implemented each featur
 This was a college project for my Database Management course. The goal was to identify a real-world application where we would utilize a database and implement it using whatever programming language/s we desired. I decided to create a simulator for purchasing books from a bookstore website. The program output is displayed as text from within a console.  In addition to coding the project, we needed to provide documentation that explains, our application's functionality, defines our targeted users, and includes an ER Diagram, to model the domain of our database used in our application.
 
 
-Below, I've included a brief outline of the tools I used to implement my application, features that I incorporated into implementing it, and an explanation of what happens when the program is run. At the end, there is a screenshot of a demo of the program running.
-
 #Features for the Application
 
 **Basic Features**
