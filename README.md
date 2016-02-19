@@ -2,12 +2,12 @@
 
 I've created a wiki with a detailed description of how I implemented each feature into this assignment. To read it go [here](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/Design-Plan)
 
-#Project Summary:
+###Project Summary:
 
 This was a college project for my Database Management course. The goal was to identify a real-world application where we would utilize a database and implement it using whatever programming language/s we desired. I decided to create a simulator for purchasing books from a bookstore website. The program output is displayed as text from within a console.  In addition to coding the project, we needed to provide documentation that explains, our application's functionality, defines our targeted users, and includes an ER Diagram, to model the domain of our database used in our application.
 
 
-#Features for the Application
+###Features for the Application
 
 **Basic Features**
 
@@ -35,7 +35,7 @@ This was a college project for my Database Management course. The goal was to id
 
 *The name of the database tables for which I have stored each of this information is called, "account", "item_record", and "check _out".*
 
-#Tools Used:
+###Tools Used:
 
 -	**MySQL Workbench** (to create and test the database tables)
 -	**C3PO** (an external library which utilizes the data pooling technique when connecting to the database)
@@ -45,7 +45,7 @@ This was a college project for my Database Management course. The goal was to id
 
 **Note:** I've created some SQL files containing the database tables needed for the databaseL. You will need to import them using MySQL Workbench. To download the files, go [here](https://drive.google.com/folderview?id=0B_Mzb0tpEYLWeGcyMHc3cFFlZ3M&usp=sharing)
 
-#Project Setup
+###Project Setup
 
 ```
 Open Windows Git Bash (or command line) and cd to your desired project directory
@@ -56,7 +56,7 @@ git clone https://github.com/JerJohn15/Bookstore-Website-Simulator.git
 ```
 
 
-#Project Demo
+###Project Demo
 
 Below is a demo of my project. Demonstration shows: a user logging into
 an existing account, searching for a book by entering in a book title, adding
