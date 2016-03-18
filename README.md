@@ -43,12 +43,12 @@ This was a college project for my Database Management course. The goal was to id
 -	**Programming Languages:** Java, JDBC, MySQL
 
 
-**Note:** I've created some SQL files containing the database tables needed for the databaseL. You will need to import them using MySQL Workbench. To download the files, go [here](https://drive.google.com/folderview?id=0B_Mzb0tpEYLWeGcyMHc3cFFlZ3M&usp=sharing)
+**Note:** I've created some SQL files containing the database tables needed for the database. You will need to import them using MySQL Workbench. To download the files, go [here](https://drive.google.com/folderview?id=0B_Mzb0tpEYLWeGcyMHc3cFFlZ3M&usp=sharing)
 
 ###Project Setup
 
 ```
-Open Windows Git Bash (or command line) and cd to your desired project directory
+//Open Windows Git Bash (or command line) and cd to your desired project directory
 
 Type:
 git clone https://github.com/JerJohn15/Bookstore-Website-Simulator.git
