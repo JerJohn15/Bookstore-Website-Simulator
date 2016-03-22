@@ -2,6 +2,8 @@
 
 I've created a wiki with a detailed description of how I implemented each feature into this assignment. To read it go [here](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/Design-Plan)
 
+There is also a [Test Plan](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/Test-Plan) in the works.
+
 ###Project Summary:
 
 This was a college project for my Database Management course. The goal was to identify a real-world application where we would utilize a database and implement it using whatever programming language/s we desired. I decided to create a simulator for purchasing books from a bookstore website. The program output is displayed as text from within a console.  In addition to coding the project, we needed to provide documentation that explains, our application's functionality, defines our targeted users, and includes an ER Diagram, to model the domain of our database used in our application.
