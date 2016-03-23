@@ -387,8 +387,7 @@ public class Menus extends DB{
 				+ "username = '"+ username + "'";
 
 		if(isEmpty()== false){
-			//SQLstatement = "SELECT book_title,author,price FROM bookstore.check_out "
-				//	+ "WHERE username = '" + username + "'";
+			
 			isItem_Record = false;
 			handleQueries();
 		}else{
