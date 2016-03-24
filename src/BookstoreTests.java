@@ -24,15 +24,16 @@ public class BookstoreTests {
 
 		String SQLquery = "";
 		DB database;
-		public boolean hasLoggedIn(String username, String password ) throws IOException, SQLException, PropertyVetoException{
+		String username = "";
+		String password = "";
+		public boolean hasLoggedIn( ) throws IOException, SQLException, PropertyVetoException{
 
-			String user = username;
-			String pw = password;
-
+			 username = "admin";
+			 password = "bookstore";
 
 			SQLquery = "SELECT username, password"
 					+ " FROM bookstore.account WHERE username = '"
-					+ user + "' AND password = '" + pw + "'";
+					+ username + "' AND password = '" + password + "'";
 							database = new DB();
 
 			database.setSQLstatement(SQLquery);
@@ -49,15 +50,53 @@ public class BookstoreTests {
 		@Test
 		public void handleLogin() throws IOException, SQLException, PropertyVetoException{
 
-			String username = "admin";
-			String password = "bookstore";
-
-			boolean isValid = hasLoggedIn(username,password);
+			
+			boolean isValid = hasLoggedIn();
 			
 			
 			assertEquals("Enter in a valid username and password to log into the website",true,isValid);
 
 		}
+		
+		public boolean hasRegistered() throws IOException, PropertyVetoException, SQLException{
+			//make the username and password values something different.
+			username = "MrJava";
+			password = "code4life";
+			
+			SQLquery = "SELECT username FROM bookstore.account WHERE username = '"
+					+ username + "'";
+					
+			database = new DB();
+			
+			database.setSQLstatement(SQLquery);
+			
+			if(!database.hasVerifiedLogin()){
+				
+				SQLquery = "INSERT INTO bookstore.account (username,password) VALUES('"
+						+ username +"','" + password + "')";
+				
+				database.setSQLstatement(SQLquery);
+
+				
+				database.handleNonQueries();
+				return true;
+				
+			}
+			
+			return false;
+		}
+		
+		
+		@Test
+		public void handleRegistration() throws IOException, PropertyVetoException, SQLException{
+			
+			boolean isValid = hasRegistered();
+			
+			
+			assertEquals("Enter in a username and password to register a new account", true, isValid);
+			
+		}
+		
 
 	}
 
