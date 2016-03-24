@@ -28,11 +28,11 @@ public class DB {
 	protected boolean isCategory = false;
 	protected boolean hasLoggedIn = false;
 	protected cashRegister register = new cashRegister();
-	
-	
-	
+
+
+
 	/**
-	 * @details - Gets a reference from the DataSource clas.
+	 * @details - Gets a reference from the DataSource class.
 	 * @throws IOException
 	 * @throws SQLException
 	 * @throws PropertyVetoException
@@ -42,9 +42,21 @@ public class DB {
 	}
 
 
+	/**
+	* @method - setSQLstatement
+	 * @details - Sets an SQL query.
+	 (Note: This method is only used for performing unit tests. See BookstoreTests.java)
+
+	 */
+public void setSQLstatement(String SQL){
+
+SQLstatement = SQL;
+
+}
+
 
 /**
- * @details - Gets the connection from the DB 
+ * @details - Gets the connection from the DB
  * @throws SQLException
  * @throws IOException
  * @throws PropertyVetoException
@@ -58,10 +70,10 @@ public class DB {
 	 * @method - isEmpty
 	 * @details - Checks to see if a record is in the checkout
 	 * cart.
-	 * @return - true or false 
-	 * @throws PropertyVetoException 
-	 * @throws IOException 
-	 * 
+	 * @return - true or false
+	 * @throws PropertyVetoException
+	 * @throws IOException
+	 *
 	 */
 
 	public boolean isEmpty() throws IOException, PropertyVetoException{
@@ -69,7 +81,7 @@ public class DB {
 		try {
 			retrieveConnection();
 			rs = statement.executeQuery(SQLstatement);
-			//check for item not found first 
+			//check for item not found first
 			if(rs.isBeforeFirst()== false){
 				return true;
 			}
@@ -78,31 +90,31 @@ public class DB {
 			e.printStackTrace();
 		} finally {
 			if (rs != null)
-				try 
-			{ 
+				try
+			{
 					rs.close();
-			} 
-			catch (SQLException e) 
+			}
+			catch (SQLException e)
 			{e.printStackTrace();
 			}
 			if (statement != null)
-				try 
+				try
 			{ statement.close();
-			} 
+			}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
 			if (connection != null)
 				try {
-					connection.close(); 
-				} 
+					connection.close();
+				}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
 		return false;
 	}
-	
+
 	/**
 	 * @method - fetchPayment
 	 * @details - Retrieves a user's money from
@@ -113,46 +125,46 @@ public class DB {
 	public void fetchPayment() throws IOException, PropertyVetoException{
 
 		try {
-			retrieveConnection();	
+			retrieveConnection();
 			rs = statement.executeQuery(SQLstatement);
 
 		if(!rs.isBeforeFirst()){
 			System.out.println("payment doesn't exist.");
 		}else{
 			while(rs.next()){
-				
-			register.setBudget(rs.getDouble(1));	
+
+			register.setBudget(rs.getDouble(1));
 			}
-			
+
 		}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs != null)
-				try 
-			{ 
+				try
+			{
 					rs.close();
-			} 
-			catch (SQLException e) 
+			}
+			catch (SQLException e)
 			{e.printStackTrace();
 			}
 			if (statement != null)
-				try 
+				try
 			{ statement.close();
-			} 
+			}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
 			if (connection != null)
 				try {
-					connection.close(); 
-				} 
+					connection.close();
+				}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
 	}
-	
+
 
 	/**
 	 * @method - retrieveTotal
@@ -163,7 +175,7 @@ public class DB {
 	public void retrieveTotal() throws IOException, PropertyVetoException{
 
 		try {
-			retrieveConnection();	
+			retrieveConnection();
 			rs = statement.executeQuery(SQLstatement);
 
 			while(rs.next()){
@@ -175,24 +187,24 @@ public class DB {
 			e.printStackTrace();
 		} finally {
 			if (rs != null)
-				try 
-			{ 
+				try
+			{
 					rs.close();
-			} 
-			catch (SQLException e) 
+			}
+			catch (SQLException e)
 			{e.printStackTrace();
 			}
 			if (statement != null)
-				try 
+				try
 			{ statement.close();
-			} 
+			}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
 			if (connection != null)
 				try {
-					connection.close(); 
-				} 
+					connection.close();
+				}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -205,7 +217,7 @@ public class DB {
 
 	/**
 	 * @method - hasVerifiedLogin
-	 * @details - Verifies a user's login credentials 
+	 * @details - Verifies a user's login credentials
 	 * @postcond - sets boolean variable to true or false
 	 * @throws IOException
 	 * @throws PropertyVetoException
@@ -216,35 +228,35 @@ public class DB {
 
 
 		try {
-			retrieveConnection();	
+			retrieveConnection();
 			rs = statement.executeQuery(SQLstatement);
-		
+
 			if(!rs.isBeforeFirst()){
-			
+
 				return false;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs != null)
-				try 
-			{ 
+				try
+			{
 					rs.close();
-			} 
-			catch (SQLException e) 
+			}
+			catch (SQLException e)
 			{e.printStackTrace();
 			}
 			if (statement != null)
-				try 
+				try
 			{ statement.close();
-			} 
+			}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
 			if (connection != null)
 				try {
-					connection.close(); 
-				} 
+					connection.close();
+				}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -253,11 +265,11 @@ public class DB {
 	}
 
 	/**
-	 * 
+	 *
 	 * @method - handleQueries
 	 * @details - Handles the Query operations for the item_record
-	 * and check_out databases. 
-	 * @precond - after executing query, checks for which table to retrieve 
+	 * and check_out databases.
+	 * @precond - after executing query, checks for which table to retrieve
 	 * the data from (either item_record or check_out).
 	 *  @postcond - Prints out data from the table
 	 * @throws IOException
@@ -269,7 +281,7 @@ public class DB {
 			retrieveConnection();
 
 			rs = statement.executeQuery(SQLstatement);
-			//check for item not found first 
+			//check for item not found first
 			if(!rs.isBeforeFirst()){
 				System.out.println("Item not found or item doesn't exist.");
 			}else{
@@ -286,7 +298,7 @@ public class DB {
 				}else if(isItem_Record == true && isCategory == false){
 					while(rs.next()){
 						// show all items in items_record table
-						System.out.println( rs.getString("book_id") 
+						System.out.println( rs.getString("book_id")
 								+ "  " + rs.getString("book_category")
 								+ "  " + rs.getString("book_title")+
 								"  " + rs.getString("author")
@@ -311,24 +323,24 @@ public class DB {
 			e.printStackTrace();
 		} finally {
 			if (rs != null)
-				try 
-			{ 
+				try
+			{
 					rs.close();
-			} 
-			catch (SQLException e) 
+			}
+			catch (SQLException e)
 			{e.printStackTrace();
 			}
 			if (statement != null)
-				try 
+				try
 			{ statement.close();
-			} 
+			}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
 			if (connection != null)
 				try {
-					connection.close(); 
-				} 
+					connection.close();
+				}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -340,9 +352,9 @@ public class DB {
 	/**
 	 * @method - handleNonQueries
 	 * @details - handles all non query operations (INSERT, DELETE,
-	 * UPDATE) 
+	 * UPDATE)
 	 * @postcond- Displays an item not found message
-	 * if SQL statement is invalid. 
+	 * if SQL statement is invalid.
 	 * @throws IOException
 	 * @throws PropertyVetoException
 	 */
@@ -357,24 +369,24 @@ public class DB {
 			e.printStackTrace();
 		} finally {
 			if (rs != null)
-				try 
-			{ 
+				try
+			{
 					rs.close();
-			} 
-			catch (SQLException e) 
+			}
+			catch (SQLException e)
 			{e.printStackTrace();
 			}
 			if (statement != null)
-				try 
+				try
 			{ statement.close();
-			} 
+			}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
 			if (connection != null)
 				try {
-					connection.close(); 
-				} 
+					connection.close();
+				}
 			catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -382,5 +394,3 @@ public class DB {
 	}
 
 }
-
-
