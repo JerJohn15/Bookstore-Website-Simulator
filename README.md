@@ -2,7 +2,7 @@
 
 I've created a wiki with a detailed description of how I implemented each feature into this assignment. To read it go [here](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/Design-Plan)
 
-There is also a [Test Plan](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/Test-Plan) in the works.
+I've also created a [Test Plan](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/Test-Plan) with a demo of unit tests using Junit.
 
 ###Project Summary:
 
@@ -43,7 +43,7 @@ This was a college project for my Database Management course. The goal was to id
 -	**C3PO** (an external library which utilizes the data pooling technique when connecting to the database)
 -	**Eclipse IDE** (for coding and testing the finished project)
 -	**Programming Languages:** Java, JDBC, MySQL
-
+- **Junit**
 
 **Note:** I've created some SQL files containing the database tables needed for the database. You will need to import them using MySQL Workbench. To download the files, go [here](https://drive.google.com/folderview?id=0B_Mzb0tpEYLWeGcyMHc3cFFlZ3M&usp=sharing)
 
