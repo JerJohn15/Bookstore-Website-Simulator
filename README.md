@@ -49,10 +49,9 @@ This was a college project for my Database Management course. The goal was to id
 
 ###Project Setup
 
-```
-//Open Windows Git Bash (or command line) and cd to your desired project directory
+```java
+//Open Windows Git Bash (or command line), cd to your desired project directory, and type
 
-Type:
 git clone https://github.com/JerJohn15/Bookstore-Website-Simulator.git
 
 ```
