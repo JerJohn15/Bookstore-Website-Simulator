@@ -8,6 +8,9 @@ I've also created a [Test Plan](https://github.com/JerJohn15/Bookstore-Website-S
 
 This was a college project for my Database Management course. The goal was to identify a real-world application where we would utilize a database and implement it using whatever programming language/s we desired. I decided to create a simulator for purchasing books from a bookstore website. The program output is displayed as text from within a console.  In addition to coding the project, we needed to provide documentation that explains, our application's functionality, defines our targeted users, and includes an ER Diagram, to model the domain of our database used in our application.
 
+**Updated:** I'm planning on implementing a GUI, on top of the front-end I had created originally, using JavaFX.   
+
+
 
 ###Features for the Application
 
@@ -64,3 +67,9 @@ an existing account, searching for a book by entering in a book title, adding
 a searched book to the checkout cart and making a purchase.
 
 ![Demo](https://media.giphy.com/media/l0NwynxaONw6paOly/giphy.gif)
+
+###ToDo List
+
+- [ ] Convert the front-end of the application, originally displayed as text in the developer's console, to a GUI using JavaFX
+- [ ] Fix all bugs as described in the [issues](https://github.com/JerJohn15/Bookstore-Website-Simulator/issues/1) section and [Potential Bugs](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/Design-Plan) section of the wiki
+- [ ] Improve the design of creating MySQL queries
