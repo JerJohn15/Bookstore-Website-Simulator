@@ -2,7 +2,7 @@
 
 I've created a wiki with a detailed description of how I implemented each feature into this assignment. To read it go [here](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/Design-Plan)
 
-I've also created a [Test Plan](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/Test-Plan) with a demo of unit tests using Junit.
+There is also a [Test Plan](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/Test-Plan) with a demo of unit tests using Junit.
 
 ###Project Summary:
 
@@ -20,22 +20,18 @@ This was a college project for my Database Management course. The goal was to id
 -	Purchase books stored in a user’s checkout cart
 -	Add an allowance to a user’s account
 
-**User Friendly Features:**
+**User-Friendly Features:**
 
 -	Ability to log out from the account
 -	Ability to handle invalid character input
 -	Ability to go back to a previous page  
 -	Ability to delete books from a user’s checkout cart
 
-*In addition to these features, I have also designed my program, to handle, some common potential errors that could be made from within the program, based on user input.*
-
 **Database Usage:**
 
 - For storing a user's username, password, and allowance
 -  For storing all of the books that are available for sale
 - For storing all of the books that are within a user's checkout cart
-
-*The name of the database tables for which I have stored each of this information is called, "account", "item_record", and "check _out".*
 
 ###Tools Used:
 
@@ -45,7 +41,8 @@ This was a college project for my Database Management course. The goal was to id
 -	**Programming Languages:** Java, JDBC, MySQL
 - **Junit**
 
-**Note:** I've created some SQL files containing the database tables needed for the database. You will need to import them using MySQL Workbench. To download the files, go [here](https://drive.google.com/folderview?id=0B_Mzb0tpEYLWeGcyMHc3cFFlZ3M&usp=sharing)
+**Note:** I've created some SQL files containing the database tables needed for the database. You will need to import them using MySQL Workbench. To download the files, go [here](https://drive.google.com/folderview?id=0B_Mzb0tpEYLWeGcyMHc3cFFlZ3M&usp=sharing). If those links no longer work, there are code snipetts on my [wiki](https://github.com/JerJohn15/Bookstore-Website-Simulator/wiki/MySQL-Table-Specs) page to build the tables manually.
+
 
 ###Project Setup
 
