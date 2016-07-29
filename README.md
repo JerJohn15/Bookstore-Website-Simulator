@@ -59,8 +59,8 @@ git clone https://github.com/JerJohn15/Bookstore-Website-Simulator.git
 
 ###Project Demo
 
-Below is a demo of my project. Demonstration shows: a user logging into
+Below is a demo of my project. The demonstration shows: a user logging into
 an existing account, searching for a book by entering in a book title, adding
-a searched book to the checkout cart and making a purchase.
+a searched book to the checkout cart, and making a purchase.
 
 ![Demo](https://media.giphy.com/media/l0NwynxaONw6paOly/giphy.gif)
